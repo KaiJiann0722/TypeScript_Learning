@@ -46,6 +46,9 @@ class Employee {
         this.address = address;
     }
 
+     toString(): string {
+        return `{${this.id}, ${this.name}, ${this.address}}`;
+    }
 };
 
 let emp = new Employee(1, "Tan", "Address");
@@ -66,3 +69,12 @@ class Manager extends Employee {
 let manager = new Manager(2, "John", "Kuala Lumpur");
 
 console.log(manager)
+
+let managerList: Manager[] = [
+    new Manager(1, "John", "Kuala Lumpur"),
+    new Manager(2, "Cena", "Kuala Lumpur1"),
+    new Manager(3, "Zhi", "Kuala Lumpur2"),
+]
+
+console.log("First index of managerList: " + managerList[0]);
+
